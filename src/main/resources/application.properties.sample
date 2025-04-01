@@ -1,0 +1,4 @@
+spring.application.name=fintech-transaction-system
+
+spring.security.oauth2.client.registration.google.client-id=abcd
+spring.security.oauth2.client.registration.google.client-secret=password
