@@ -1,4 +1,5 @@
 spring.application.name=fintech-transaction-system
 
-spring.security.oauth2.client.registration.google.client-id=abcd
-spring.security.oauth2.client.registration.google.client-secret=password
+spring.security.oauth2.resourceserver.jwt.issuer-uri=https://accounts.google.com
+spring.security.oauth2.client.registration.google.client-id=client_id
+spring.security.oauth2.client.registration.google.client-secret=client_seccret
