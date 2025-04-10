@@ -17,6 +17,8 @@ RUN mvn clean package -DskipTests
 # Use OpenJDK 21 as the runtime environment
 FROM eclipse-temurin:21-jdk AS runtime
 
+ENV JAVA_TOOL_OPTIONS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+
 # Set the working directory for the final image
 WORKDIR /app
 
@@ -27,6 +29,7 @@ RUN ls /app
 
 # Expose the application port
 EXPOSE 8080
+EXPOSE 5005
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
